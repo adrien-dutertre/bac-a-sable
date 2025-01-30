@@ -1,0 +1,19 @@
+<mat-toolbar>
+    <!-- <button mat-icon-button (click)="retourAccueil()">
+        <mat-icon>arrow_back</mat-icon>
+    </button> -->
+    <a mat-icon-button [routerLink]="['/']">
+        <mat-icon>arrow_back</mat-icon>
+    </a>
+    <span>{{ valeur }}</span>
+    <button mat-icon-button>
+        <mat-icon>info</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <mat-form-field>
+        <mat-label>Projet</mat-label>
+        <mat-select *ngFor="let projet of listeProjets" [(value)]="valeur">
+            <mat-option [value]="projet.titre">{{ projet.titre }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+</mat-toolbar>
