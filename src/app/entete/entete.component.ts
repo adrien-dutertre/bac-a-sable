@@ -1,29 +1,28 @@
-import { Component, Input } from '@angular/core';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {FormsModule} from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { Component, inject, Input, OnInit } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { Projet } from '../accueil/services/interfaceProjet';
 import { ProjetsService } from '../accueil/services/projets.service';
-import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-entete',
-  imports: [RouterLink, NgFor, MatIconModule, MatButtonModule, MatToolbarModule, FormsModule, MatInputModule, MatSelectModule, MatFormFieldModule],
+  imports: [RouterLink, MatIconModule, MatButtonModule, MatToolbarModule],
   templateUrl: './entete.component.html',
-  styleUrl: './entete.component.css'
+  styleUrl: './entete.component.css',
 })
-export class EnteteComponent {
-  constructor (private projectList : ProjetsService) {}
-
+export class EnteteComponent implements OnInit {
+  private projectList = inject(ProjetsService);
+  description: string = "";
   listeProjets: Projet[] = [];
-  @Input () valeur : string = "";
+  @Input() valeur: string = '';
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.listeProjets = this.projectList.getProjets();
+    const projetEnCours: number = this.listeProjets.findIndex( (projet) => {
+      return projet.titre.includes(this.valeur);
+    });
+    this.description = this.listeProjets[projetEnCours].description;
   }
 }

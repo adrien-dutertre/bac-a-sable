@@ -1,2 +1,42 @@
 <app-entete [valeur]="'Calculatrice'"></app-entete>
-<p>Une calculatrice ici, bientôt...</p>
+<main>
+    <div class="calculatrice">
+        <div #valeur class="ecran" title="{{ this.valeurAffichee.join('') }}"></div>
+        <div class="clavier">
+            <button class="btn-fonction" (click)="effacerSaisie()" title="Effacer la saisie">CE</button>
+            <button class="btn-fonction" (click)="effacerMemoire()" title="Effacer la mémoire">C</button>
+            <button class="btn-fonction" (click)="effacerChiffre()" title="Effacer le dernier chiffre">
+                <mat-icon fontIcon="backspace"></mat-icon>
+            </button>
+            <button class="btn-fonction" (click)="btnFonction('Diviser')" title="Diviser">
+                /
+            </button>
+            <button class="btn-chiffre" (click)="ajoutChiffre('7')">7</button>
+            <button class="btn-chiffre" (click)="ajoutChiffre('8')">8</button>
+            <button class="btn-chiffre" (click)="ajoutChiffre('9')">9</button>
+            <button class="btn-fonction" (click)="btnFonction('Multiplier')" title="Multiplier">
+                x
+            </button>
+            <button class="btn-chiffre" (click)="ajoutChiffre('4')">4</button>
+            <button class="btn-chiffre" (click)="ajoutChiffre('5')">5</button>
+            <button class="btn-chiffre" (click)="ajoutChiffre('6')">6</button>
+            <button class="btn-fonction" (click)="btnFonction('Soustraire')" title="Soustraire">
+                -
+            </button>
+            <button class="btn-chiffre" (click)="ajoutChiffre('1')">1</button>
+            <button class="btn-chiffre" (click)="ajoutChiffre('2')">2</button>
+            <button class="btn-chiffre" (click)="ajoutChiffre('3')">3</button>
+            <button class="btn-fonction" (click)="btnFonction('Ajouter')" title="Additionner">
+                +
+            </button>
+            <button class="btn-chiffre" (click)="btnSigne()" title="Changer le signe">
+                +/-
+            </button>
+            <button class="btn-chiffre" (click)="ajoutChiffre('0')">0</button>
+            <button class="btn-chiffre" (click)="ajoutVirgule()">,</button>
+            <button class="btn-egal" (click)="btnEgal()" title="Calculer">
+                =
+            </button>
+        </div>
+    </div>
+</main>
