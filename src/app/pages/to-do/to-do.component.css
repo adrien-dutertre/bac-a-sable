@@ -1,0 +1,113 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+main {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    justify-self: center;
+    padding: 1rem;
+
+    /* Liste de couleur */
+    --primary-color: #f8961e;
+}
+
+#add-task {
+    position: relative;
+}
+
+#listCompletion {
+    padding-block: 0.25rem;
+}
+
+meter {
+    width: 100%;
+}
+
+meter::-webkit-meter-even-less-good-value {
+    background: #f3722c;
+}
+
+meter::-webkit-meter-suboptimum-value {
+    background: #f9c74f;
+}
+
+meter::-webkit-meter-optimum-value {
+    background: #43aa8b;
+}
+
+#add-task input {
+    flex-grow: 1;
+    min-height: 40px;
+    align-self: stretch;
+    font-size: 1rem;
+}
+
+#add-task label {
+    position: absolute;
+    top: -1rem;
+    font-size: small;
+}
+
+#tasks {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#empty-list {
+    display: block;
+    padding-block: 1rem;
+    color: grey;
+}
+
+#tasks li {
+    padding-block: 1rem;
+    padding-inline: 0.25rem;
+}
+
+#tasks li:hover {
+    background-color: var(--mat-sys-surface-bright);
+}
+
+#tasks label {
+    flex-grow: 1;
+}
+
+#tasks input {
+    accent-color: var(--primary-color);
+}
+
+#tasks input:checked + label {
+    text-decoration: line-through;
+    color: grey;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#add-task button {
+    align-self: stretch;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 2px;
+    font-size: 1rem;
+    font-weight: bold;
+}

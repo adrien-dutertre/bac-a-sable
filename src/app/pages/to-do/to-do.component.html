@@ -1,0 +1,33 @@
+<app-entete [valeur]="'To-do List'"></app-entete>
+<main class="flex-column">
+    <section id="listCompletion" class="flex-column">
+        {{ completion }}% de complétion
+        <meter id="fuel" min="0" max="100" low="33" high="66" optimum="75" [value]="completion">
+            at 50/100
+        </meter>
+    </section>
+    <section id="tasks" class="flex-column">
+        <h2>Liste de tâches</h2>
+        <form id="add-task" class="flex-row" (submit)="addTask($event, newTask.value)">
+            <label for="newtask">Tâche</label>
+            <input #newTask id="newtask" name="newtask" type="text" autofocus required>
+            <button type="submit" class="btn-primary">Ajouter une tâche</button>
+        </form>
+        <ul id="tasks">
+            @for (task of taskList; track $index) {
+                <li class="flex-row">
+                    <input type="checkbox" [id]="'task-'+$index" [name]="'task-'+$index" (change)="onCheckboxChange($event, $index)" [checked]="task.checked">
+                    <label [for]="'task-'+$index">{{ task.label }}</label>
+                    <button 
+                        type="button" 
+                        (click)="deleteTask($index)"
+                        title="Supprimer l'élément"
+                        ><mat-icon fontIcon="delete"></mat-icon></button>
+                </li>
+            } @empty {
+                <em id="empty-list">Aucune tâche</em>
+            }
+        </ul>
+    </section>
+
+</main>

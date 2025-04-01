@@ -2,11 +2,11 @@
     <!-- <button mat-icon-button (click)="retourAccueil()">
         <mat-icon>arrow_back</mat-icon>
     </button> -->
-    <a mat-icon-button [routerLink]="['/']">
+    <a mat-icon-button [routerLink]="['/']" aria-label="Retourner à l'accueil">
         <mat-icon>arrow_back</mat-icon>
     </a>
     <span>{{ valeur }}</span>
-    <button mat-icon-button (click)="modal.showModal()">
+    <button mat-icon-button (click)="modal.showModal()" title="Afficher les informations du projet">
         <mat-icon>info</mat-icon>
     </button>
 </mat-toolbar>

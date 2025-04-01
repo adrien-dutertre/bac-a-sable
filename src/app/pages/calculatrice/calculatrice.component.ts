@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { EnteteComponent } from '../entete/entete.component';
+import { EnteteComponent } from '../../components/entete/entete.component';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
