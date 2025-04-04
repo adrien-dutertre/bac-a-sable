@@ -6,8 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-to-do',
   imports: [EnteteComponent, MatIconModule],
-  templateUrl: './to-do.component.html',
-  styleUrl: './to-do.component.css'
+  templateUrl: './todo.component.html',
+  styleUrl: './todo.component.css'
 })
 export class ToDoComponent implements OnInit {
   //Variables
