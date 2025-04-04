@@ -54,7 +54,7 @@ export class ToDoComponent implements OnInit {
 
   loadData(): void {
     const data = localStorage.getItem("task-list");
-    const JSONdata = data ? JSON.parse(data) : {};
+    const JSONdata = data ? JSON.parse(data) : [];
     this.taskList = JSONdata;
   }
 
