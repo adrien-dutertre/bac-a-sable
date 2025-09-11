@@ -1,0 +1,59 @@
+<app-entete [valeur]="'Meteo'"></app-entete>
+<main>
+    <select [(ngModel)]="current_city"
+            [ngModelOptions]="{updateOn: 'change'}"
+            (ngModelChange)="changeCity($event)"
+            class="dosis-font-400 city"
+            name="cityselector"
+            id="cityselector">
+        @for (city of cities; track $index) {
+            <option [value]="city.city">{{ city.city }}</option>
+        }
+    </select>
+    <hr>
+    <p class="dosis-font-200 current-temp">{{ meteo.current.temperature_2m | number: '1.0-0' }}
+        <span class="temp-unit">{{ meteo.current_units.temperature_2m }}</span>
+    </p>
+    <p class="dosis-font-400">{{ getWeatherDescription(meteo.current.weather_code) }}</p>
+    <hr>
+    <ul class="forecast">
+        <li>
+            <p class="dosis-font-400 day">Aujourd'hui</p>
+            <img [src]="getWeatherImgURL(meteo.daily.weather_code[0])"
+                 [alt]="getWeatherDescription(meteo.daily.weather_code[0])"
+                 [title]="getWeatherDescription(meteo.daily.weather_code[0])"
+                 width="48px"
+                 height="48px">
+            <p class="dosis-font-400 temp">{{ meteo.daily.temperature_2m_min[0] | number: '1.0-0' }} <span class="temp-unit">{{ meteo.daily_units.temperature_2m_min }}</span>
+                <span class="separator">|</span>
+                {{ meteo.daily.temperature_2m_max[0] | number: '1.0-0' }} <span class="temp-unit">{{ meteo.daily_units.temperature_2m_max }}</span>
+            </p>
+        </li>
+        <li>
+            <p class="dosis-font-400 day">Demain</p>
+            <img [src]="getWeatherImgURL(meteo.daily.weather_code[1])"
+                 [alt]="getWeatherDescription(meteo.daily.weather_code[1])"
+                 [title]="getWeatherDescription(meteo.daily.weather_code[1])"
+                 width="48px"
+                 height="48px">
+            <p class="dosis-font-400 temp">{{ meteo.daily.temperature_2m_min[1] | number: '1.0-0' }} <span class="temp-unit">{{ meteo.daily_units.temperature_2m_min }}</span>
+                <span class="separator">|</span>
+                {{ meteo.daily.temperature_2m_max[1] | number: '1.0-0' }} <span class="temp-unit">{{ meteo.daily_units.temperature_2m_max }}</span>
+            </p>
+        </li>
+        <li>
+            <p class="dosis-font-400 day">Après-demain</p>
+            <img [src]="getWeatherImgURL(meteo.daily.weather_code[2])"
+                 [alt]="getWeatherDescription(meteo.daily.weather_code[2])"
+                 [title]="getWeatherDescription(meteo.daily.weather_code[2])"
+                 width="48px"
+                 height="48px">
+            <p class="dosis-font-400 temp">{{ meteo.daily.temperature_2m_min[2] | number: '1.0-0' }} <span class="temp-unit">{{ meteo.daily_units.temperature_2m_min }}</span>
+                <span class="separator">|</span>
+                {{ meteo.daily.temperature_2m_max[2] | number: '1.0-0' }} <span class="temp-unit">{{ meteo.daily_units.temperature_2m_max }}</span>
+            </p>
+        </li>
+    </ul>
+
+
+</main>
