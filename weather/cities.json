@@ -1,0 +1,172 @@
+[
+    {
+        "city":"Ajaccio",
+        "latitude": 41.9347,
+        "longitude": 8.7009
+    },
+    {
+        "city":"Nice",
+        "latitude": 43.7034,
+        "longitude": 7.2663
+    },
+    {
+        "city":"Marseille",
+        "latitude": 43.2964,
+        "longitude": 5.3700
+    },
+    {
+        "city":"Montpellier",
+        "latitude": 43.6119,
+        "longitude": 3.8772
+    },
+    {
+        "city":"Perpignan",
+        "latitude": 42.6986,
+        "longitude": 2.8956
+    },
+    {
+        "city":"Toulouse",
+        "latitude": 43.6045,
+        "longitude": 1.4440
+    },
+    {
+        "city":"Tarbes",
+        "latitude": 43.2346,
+        "longitude": 0.0661
+    },
+    {
+        "city":"Biarritz",
+        "latitude": 43.4692,
+        "longitude": -1.5521
+    },
+    {
+        "city":"Gap",
+        "latitude": 44.5802,
+        "longitude": 6.0648
+    },
+    {
+        "city":"Montélimar",
+        "latitude": 44.5537,
+        "longitude": 4.7484
+    },
+    {
+        "city":"Aurillac",
+        "latitude": 44.9244,
+        "longitude": 2.4415
+    },
+    {
+        "city":"Bordeaux",
+        "latitude": 44.8400,
+        "longitude": -0.5800
+    },
+    {
+        "city":"Bourg-Saint-Maurice",
+        "latitude": 45.6649,
+        "longitude": 6.7665
+    },
+    {
+        "city":"Lyon",
+        "latitude": 45.7600,
+        "longitude": 4.8400
+    },
+    {
+        "city":"Vichy",
+        "latitude": 46.1299,
+        "longitude": 3.4244
+    },
+    {
+        "city":"Limoges",
+        "latitude": 49.1203,
+        "longitude": 6.1778
+    },
+    {
+        "city":"La Rochelle",
+        "latitude": 46.1624,
+        "longitude": -1.1734
+    },
+    {
+        "city":"Chalon-sur-Saône",
+        "latitude": 46.7898,
+        "longitude": 4.8524
+    },
+    {
+        "city":"Bourges",
+        "latitude": 47.0749,
+        "longitude": 2.4046
+    },
+    {
+        "city":"Tours",
+        "latitude": 47.3936,
+        "longitude": 0.6892
+    },
+    {
+        "city":"Nantes",
+        "latitude": 47.2181,
+        "longitude": -1.5528
+    },
+    {
+        "city":"Belfort",
+        "latitude": 47.6400,
+        "longitude": 6.8500
+    },
+    {
+        "city":"Chaumont",
+        "latitude": 48.0978,
+        "longitude": 5.1398
+    },
+    {
+        "city":"Alençon",
+        "latitude": 48.4306,
+        "longitude": 0.0931
+    },
+    {
+        "city":"Rennes",
+        "latitude": 48.1147,
+        "longitude": -1.6794
+    },
+    {
+        "city":"Brest",
+        "latitude": 48.3900,
+        "longitude": -4.4900
+    },
+    {
+        "city":"Strasbourg",
+        "latitude": 48.5833,
+        "longitude": 7.7458
+    },
+    {
+        "city":"Metz",
+        "latitude": 49.1203,
+        "longitude": 6.1778
+    },
+    {
+        "city":"Reims",
+        "latitude": 49.2628,
+        "longitude": 4.0347
+    },
+    {
+        "city":"Paris",
+        "latitude": 48.8567,
+        "longitude": 2.3522
+    },
+    {
+        "city":"Rouen",
+        "latitude": 49.4428,
+        "longitude": 1.0886
+    },
+    {
+        "city":"Cherbourg",
+        "latitude": 49.6317,
+        "longitude": -1.6209
+    },
+    {
+        "city":"Amiens",
+        "latitude": 49.8920,
+        "longitude": 2.2990
+    },
+    {
+        "city":"Lille",
+        "latitude": 50.6278,
+        "longitude": 3.0583
+    }
+]
