@@ -1,12 +1,1 @@
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
-#pied-de-page {
-    font-size: var(--mat-sys-body-small-size);
-    box-sizing: border-box;
-    background-color: #F4F4F4;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    padding: .25rem 0 .25rem 1rem;
-}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; height: 100dvh; height: 100vh;}
