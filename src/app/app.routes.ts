@@ -5,6 +5,7 @@ import { PasswordGeneratorComponent } from './pages/password-generator/password-
 import { ToDoComponent } from './pages/todo/todo.component';
 import { MeteoComponent } from './pages/meteo/meteo.component';
 import { meteoResolver } from './pages/meteo/meteo.resolver';
+import { TrainStationScreenComponent } from './pages/train-station-screen/train-station-screen.component';
 
 export const routes: Routes = [
     { path: '', component : AccueilComponent },
@@ -14,5 +15,6 @@ export const routes: Routes = [
     { path: 'meteo', component: MeteoComponent,
         resolve: {
         meteo: meteoResolver
-    }}
+    }},
+    { path: 'train-station-screen', component: TrainStationScreenComponent },
 ];

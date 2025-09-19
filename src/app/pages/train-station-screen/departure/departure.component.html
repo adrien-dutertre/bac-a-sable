@@ -1,0 +1,28 @@
+<img [src]="train().companyLogoURL" alt="logo sncf">
+<div id="train-info">
+    <div id="train-id">
+        <p id="train-type">{{ train().trainType }}</p>
+        <p id="train-number">{{ train().trainNumber }}</p>
+    </div>
+    <div id="departure-time">
+        <p>{{ train().departureTime | date:"HH:mm"}}</p>
+        @if (train().delay.isDelayed) {
+        <span id="new-time">{{ getDelayedTime() | date:"HH:mm" }}</span>
+        }
+    </div>
+    <p id="destination">{{ train().destination }}</p>
+    <div id="stops">
+        <ul id="train-stops">
+            @for (stop of train().stops; track stop) {
+            <li><span> {{ stop }}</span></li>
+            }
+        </ul>
+    </div>
+</div>
+
+@if (train().delay.isDelayed) {
+<div id="delay">Retard <br> {{ train().delay.print }}</div>
+}
+<div id="platform-info">
+    <div [class]="train().platform.platformClass">{{ train().platform.platformNumber }}</div>
+</div>

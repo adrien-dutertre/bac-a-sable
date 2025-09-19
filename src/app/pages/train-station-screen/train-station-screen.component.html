@@ -1,0 +1,13 @@
+<div class="header">
+    <p><span class="material-symbols-outlined">arrow_circle_right</span>Départs</p>
+    <p><span class="material-symbols-outlined">schedule</span>17:15 <span id="seconds">24</span></p>
+</div>
+<ul id="next-trains">
+    @for (train of myTrains; track $index) {
+        <li><app-departure 
+            [train]="train"
+            [isDelayed]="train.delay.isDelayed"
+            [laterTrain]="($index > 1)"
+            ></app-departure></li>
+    }
+</ul>

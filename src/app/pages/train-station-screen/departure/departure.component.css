@@ -1,0 +1,183 @@
+:host {
+    display: grid;
+    grid-template-columns: 6.5vw 1fr 8vw;
+    column-gap: 1.5vw;
+    font-size: 5vw;
+    margin-inline: 0.5vw;
+    padding: 0.5vw;
+    border-radius: 1% / 8%;
+    align-items: center;
+}
+
+:host.delayed {
+    grid-template-columns: 6.5vw 1fr 8vw 8vw !important;
+}
+
+#train-info {
+    display: grid;
+    grid-template-columns: 15vw 20vw 1fr;
+    grid-template-rows: 1fr 25%;
+}
+
+:host.isLater #train-info {
+    grid-template-rows: 1fr !important;
+}
+
+img {
+    width: 100%;
+    aspect-ratio: 1;
+}
+
+
+p, ul, li {
+    margin: 0;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+ul {
+    animation: defilement 30s linear infinite;
+    display: flex;
+    width: fit-content;
+}
+
+@keyframes defilement {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+li {
+    list-style-type: "\1F852";
+    list-style-position: inside;
+    font-size: 50%;
+    padding-inline-start: 1vw;
+    text-wrap: nowrap;
+    box-sizing: border-box;
+    float: left;
+}
+
+li span {
+    position: relative;
+    left: 0.25vw;
+}
+
+li::marker {
+    color: #EFFC67;
+}
+
+li:first-of-type::marker {
+    color: transparent;
+}
+
+#train-id {
+    align-self: center;
+}
+
+#train-type {
+    font-size: 30%;
+}
+
+#train-number {
+    font-size: 50%;
+    font-weight: bold;
+}
+
+#departure-time {
+    display: flex;
+    align-items: baseline;
+    gap: 2vw;
+}
+
+#departure-time p {
+    font-weight: bold;
+    color: #EFFC67;
+}
+
+#departure-time p:has(+ #new-time) {
+    color: #D57750;
+    text-decoration-line: line-through;
+}
+
+span#new-time {
+    color: #D57750;
+    font-size: 50%;
+    font-weight: bold;
+}
+
+#destination {
+    text-wrap: nowrap;
+}
+
+:host.isLater #destination, :host.isLater #departure-time p {
+    font-size: 70%;
+} 
+
+#stops {
+    grid-column: span 3 / span 3;
+    overflow: hidden;
+}
+
+.host.isLater #stops {
+    display: none;
+}
+
+#delay {
+    color: #1D212E;
+    background-color: #D57750;
+    font-size: 40%;
+    align-content: center;
+    text-align: center;
+    border-radius: 8%;
+}
+
+#platform-info {
+    display: flex;
+    justify-content: end;
+}
+
+.platform {
+    color: #1D212E;
+    background-color: #EFFC67;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    align-content: center;
+    text-align: center;
+    aspect-ratio: 1;
+    border-radius: 8%;
+}
+
+:host.isLater .platform {
+    width: 70%;
+    color: #1D212E;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 70%;
+}
+
+:host.isLater .hall {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: transparent;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 70%;
+    font-size: 70%;
+    text-align: center;
+    aspect-ratio: 1;
+    border-radius: 8%;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    position: relative;
+}
+
+:host.isLater .hall::after {
+    content: "HALL";
+    position: absolute;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 30%;
+    left: 25%;
+    bottom: 10%;
+}

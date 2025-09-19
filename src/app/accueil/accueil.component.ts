@@ -7,7 +7,7 @@ import {
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { ProjetsService } from './services/projets.service';
-import { Projet } from './services/interfaceProjet';
+import { Projet } from './services/projet.interface';
 import { RouterLinkActive, RouterModule } from '@angular/router';
 
 @Component({
